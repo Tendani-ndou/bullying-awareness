@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - S.A.F.E</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Contact Us</h1>
+        <nav>
+            <a href="index.html" class="btn">Home</a>
+            <a href="bullying-info.html" class="btn">Understanding Bullying</a> <!-- New button for bullying info -->
+            <a href="report.html" class="btn">Report</a>
+            <a href="resources.html" class="btn">Resources</a>
+            <a href="contact.html" class="btn">Contact Us</a>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="contact-form">
+            <h2>Reach out for Help</h2>
+            <form action="submit_form.php" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <br>
+                <br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                 <br>
+                 <br>
+
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject">
+                <br>
+                <br>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <br>
+                <br>
+
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Contact us at <a href="mailto:support@safeapp.com">support@safeapp.com</a></p>
+        <p>&copy; 2025 S.A.F.E. All rights reserved.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

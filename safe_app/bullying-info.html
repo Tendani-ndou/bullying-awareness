@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding Bullying - S.A.F.E</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background-color: #23add3;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            margin: 10px 0;
+        }
+        nav a {
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: #14bbf3;
+        }
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+        section {
+            margin-bottom: 30px;
+            padding: 15px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #15a2df;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        .slideshow {
+            position: relative;
+            margin: 20px 0;
+        }
+        .slide {
+            display: none;
+            width: 100%;
+            max-width: 400px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .controls {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .controls button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .controls button:hover {
+            background-color: #45a049;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        iframe {
+            width: 100%;
+            max-width: 560px;
+            height: 315px;
+            margin: 20px 0;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Understanding Bullying</h1>
+        <nav>
+            <a href="index.html" class="btn">Home</a>
+            <a href="bullying-info.html" class="btn">Understanding Bullying</a> <!-- New button for bullying info -->
+            <a href="report.html" class="btn">Report</a>
+            <a href="resources.html" class="btn">Resources</a>
+            <a href="contact.html" class="btn">Contact Us</a>
+        </nav>
+    </header>
+    <main>
+        <section class="info">
+            <h2>What is Bullying?</h2>
+            <p>Bullying is unwanted, aggressive behavior that involves a real or perceived power imbalance. It can take many forms, including physical, verbal, social, and cyberbullying.</p>
+        </section>
+        
+        <section class="response">
+            <h2>How to Respond to Bullying</h2>
+            <ul>
+                <li><strong>Stay Calm:</strong> Try not to react with anger.</li>
+                <li><strong>Document Incidents:</strong> Keep a record of bullying incidents.</li>
+                <li><strong>Talk to Someone:</strong> Share your experience with a trusted friend or adult.</li>
+                <li><strong>Report the Behavior:</strong> Use our platform to report incidents.</li>
+            </ul>
+        </section>
+
+        <section class="misconceptions">
+            <h2>Common Misconceptions about Bullying</h2>
+            <p>Many behaviors may not seem like bullying but can still be harmful:</p>
+            <ul>
+                <li><strong>Exclusion:</strong> Ignoring someone or leaving them out of activities.</li>
+                <li><strong>Gossiping:</strong> Spreading rumors about someone.</li>
+                <li><strong>Teasing:</strong> Making jokes at someone else's expense.</li>
+            </ul>
+        </section>
+
+        <section class="dealing">
+            <h2>How to Deal with Bullying</h2>
+            <ul>
+                <li><strong>Stand Up for Yourself:</strong> Assertively tell the bully to stop.</li>
+                <li><strong>Seek Support:</strong> Join support groups or talk to a counselor.</li>
+                <li><strong>Educate Yourself:</strong> Learn about the effects of bullying.</li>
+            </ul>
+        </section>
+
+        <section class="awareness">
+            <h3>Awareness Images</h3>
+            <div class="slideshow">
+                <img src="download.jpeg" alt="Image 1" class="slide">
+                <img src="download (1).jpeg" alt="Image 2" class="slide">
+                <img src="Stop Bullying Stand Up Speak Out Svg Png, Anti Bullying Png, Pink Shirt Day, Trendy Distressed Digital Download Sublimation PNG & SVG Cricut.jpeg" alt="Image 3" class="slide">
+                <div class="controls">
+                    <button id="prevBtn">&#10094;</button>
+                    <button id="nextBtn">&#10095;</button>
+                </div>
+                <p>Learn more about the effects of bullying and how to address it.</p>
+            </div>
+        </section>
+
+        <!-- YouTube Video Embed -->
+        <iframe src="https://www.youtube.com/embed/fde1S5NvZ6M" allowfullscreen></iframe>
+    </main>
+    <footer>
+        <p>Contact us at support@safeapp.com</p>
+    </footer>
+    <script src="slideshow.js"></script>
+</body>
+</html>

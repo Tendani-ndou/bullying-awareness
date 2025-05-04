@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Bullying</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+        }
+        #reportList {
+            margin-top: 20px;
+        }
+        .report-item {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Report Bullying</h1>
+        <nav>
+            <a href="index.html" class="btn">Home</a>
+            <a href="bullying-info.html" class="btn">Understanding Bullying</a>
+            <a href="report.html" class="btn">Report</a>
+            <a href="resources.html" class="btn">Resources</a>
+            <a href="contact.html" class="btn">Contact Us</a>
+        </nav>
+    </header>
+    <main>
+        <form id="reportForm">
+            <label for="reporterType">I am:</label>
+            <select id="reporterType" name="reporterType" required>
+                <option value="victim">Victim</option>
+                <option value="witness">Witness</option>
+            </select>
+            <br><br>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your Name (optional)">
+            <br><br>
+            <label for="surname">Surname:</label>
+            <input type="text" id="surname" name="surname" placeholder="Your Surname (optional)">
+            <br><br>
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" required></textarea>
+            <br><br>
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location">
+            <br><br>
+            <label for="anonymous">Report Anonymously:</label>
+            <input type="checkbox" id="anonymous" name="anonymous">
+            <br><br>
+            <button type="submit">Submit Report</button>
+        </form>
+
+        <div id="reportList">
+            <h2>Submitted Reports</h2>
+        </div>
+    </main>
+    <footer>
+        <p>Contact us at support@safeapp.com</p>
+    </footer>
+    <script>
+        const reportForm = document.getElementById('reportForm');
+        const reportList = document.getElementById('reportList');
+
+        reportForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const reporterType = document.getElementById('reporterType').value;
+            const name = document.getElementById('name').value.trim();
+            const surname = document.getElementById('surname').value.trim();
+            const description = document.getElementById('description').value.trim();
+            const location = document.getElementById('location').value.trim();
+            const isAnonymous = document.getElementById('anonymous').checked;
+            const currentTime = new Date().toLocaleString();
+
+            const displayName = isAnonymous || name === '' ? 'Anonymous' : `${name} ${surname}`;
+
+            const reportItem = document.createElement('div');
+            reportItem.classList.add('report-item');
+            reportItem.innerHTML = `
+                <strong>${displayName}</strong> <em>(${currentTime})</em>
+                <p>${description}</p>
+                <p><strong>Location:</strong> ${location || 'Not specified'}</p>
+            `;
+
+            reportList.appendChild(reportItem);
+
+            // Clear the form
+            reportForm.reset();
+        });
+    </script>
+</body>
+</html>
